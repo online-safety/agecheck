@@ -1,5 +1,7 @@
 # The `<agecheck>` element - Explainer
 
+**See also** [unofficial draft specification](https://online-safety.github.io/agecheck/).
+
 Adult content sites that check age today use either a simple link or button, or send people to third-party services that ask them to upload a copy of a physical document, such as a driver's license. Uploading physical documents risks leaking personal data and collects far more than the site needs. Sites need a way to learn a person's age group and nothing else, without needing a third-party age service, in regular and private browsing alike.
 
 Parents can already set a child's age on the platform, in the parental controls on the child's device. A website has no way to ask for that age. So a game that limits voice chat and spending must take the child's word. So must a social media site that limits who can message a younger user. On adult content sites, the child picks an age or clicks past an "I'm over 18" button.
