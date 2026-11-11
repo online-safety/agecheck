@@ -1,0 +1,31 @@
+name: Tidy document
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths:
+      - index.html
+      - sections/**
+
+jobs:
+  tidy:
+    name: Tidy up
+    runs-on: macos-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install tidy-html5
+      - run: tidy -config tidyconfig.txt -o index.html index.html
+      - run: |
+          shopt -s nullglob
+          for f in sections/*.html; do
+            tidy -config tidyconfig.txt --show-body-only yes -o "$f" "$f"
+          done
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          title: "Tidied up document using tidy-html5"
+          commit-message: "chore: tidy up the spec"
+          branch: html-tidy
