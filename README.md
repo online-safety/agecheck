@@ -1,18 +1,4 @@
-# The `<agecheck>` element
-
-## Authors
-
-- Marcos Cáceres (Apple)
-
-## Participate
-
-- [agecheck issue tracker](https://github.com/online-safety/agecheck/issues)
-
-## Status
-
-A strawperson proposal, meant to start discussion. Nothing is implemented in a shipping browser.
-
-## Introduction
+# The `<agecheck>` element - Explainer
 
 Adult content sites that check age today use either a simple link or button, or send people to third-party services that ask them to upload a copy of a physical document, such as a driver's license. Uploading physical documents risks leaking personal data and collects far more than the site needs. Sites need a way to learn a person's age group and nothing else, without needing a third-party age service, in regular and private browsing alike.
 
